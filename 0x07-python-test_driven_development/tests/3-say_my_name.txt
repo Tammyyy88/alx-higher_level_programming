@@ -1,0 +1,36 @@
+"""
+Tests for `say_my_name()`.
+"""
+
+import doctest
+
+def test_say_my_name_with_first_name_and_last_name():
+  """
+  Test that `say_my_name()` correctly prints the name of the person.
+  """
+  assert say_my_name("John", "Smith") == "My name is John Smith"
+  assert say_my_name("Walter", "White") == "My name is Walter White"
+
+def test_say_my_name_with_only_first_name():
+  """
+  Test that `say_my_name()` correctly prints the name of the person if the last name is not passed in.
+  """
+  assert say_my_name("Bob") == "My name is Bob"
+
+def test_say_my_name_with_invalid_first_name():
+  """
+  Test that `say_my_name()` raises a `TypeError` exception if the first name is not a string.
+  """
+  with pytest.raises(TypeError):
+    say_my_name(12, "White")
+
+def test_say_my_name_with_invalid_last_name():
+  """
+  Test that `say_my_name()` raises a `TypeError` exception if the last name is not a string.
+  """
+  with pytest.raises(TypeError):
+    say_my_name("John", 12)
+
+if __name__ == "__main__":
+  doctest.testmod()
+
