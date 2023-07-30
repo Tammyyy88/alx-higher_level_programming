@@ -167,4 +167,4 @@ will be raised.
     >>> my_list = MyList([1, "Betty", "Holberton", 5])
     >>> my_list.print_sorted()
     Traceback (most recent call last):
-    TypeError: unorderable types: str() < int()$ cat tests/1-my_list.txt
+    TypeError: unorderable types: str() < int()
